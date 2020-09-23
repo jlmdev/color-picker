@@ -25,11 +25,12 @@ class App extends Component {
   render() {
     return (
       <div
+        className="main-body"
         style={{
           backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${this.state.lightness}%)`,
         }}
       >
-        <div>
+        <div className="slider">
           <input
             type="range"
             value={this.state.hue}
@@ -38,7 +39,7 @@ class App extends Component {
           />
           <label htmlFor="hue">Hue</label>
         </div>
-        <div>
+        <div className="slider">
           <input
             type="range"
             value={this.state.saturation}
@@ -47,7 +48,7 @@ class App extends Component {
           />
           <label htmlFor="saturation">Saturation</label>
         </div>
-        <div>
+        <div className="slider">
           <input
             type="range"
             value={this.state.lightness}
@@ -56,7 +57,7 @@ class App extends Component {
           />
           <label htmlFor="lightness">Lightness</label>
         </div>
-        <div>
+        <div className="button-container">
           <input
             type="button"
             value="Random"
