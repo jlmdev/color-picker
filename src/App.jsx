@@ -32,6 +32,10 @@ class App extends Component {
       >
         <ul>
           <li className="title">Color Picker</li>
+          <li>
+            hsl({this.state.hue},{this.state.saturation}%,
+            {this.state.lightness}%)
+          </li>
           <li className="slider">
             <input
               type="range"
