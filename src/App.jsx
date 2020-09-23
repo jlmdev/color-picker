@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 class App extends Component {
   state = {
-    hue: 90,
-    saturation: 50,
-    lightness: 50,
+    hue: Math.floor(Math.random() * 361),
+    saturation: Math.floor(Math.random() * 101),
+    lightness: Math.floor(Math.random() * 101),
   }
 
   handleHueChange = event => {
