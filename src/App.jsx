@@ -36,6 +36,7 @@ class App extends Component {
             max="360"
             onChange={this.handleHueChange}
           />
+          <label htmlFor="hue">Hue</label>
         </div>
         <div>
           <input
@@ -44,6 +45,7 @@ class App extends Component {
             max="100"
             onChange={this.handleSaturationChange}
           />
+          <label htmlFor="saturation">Saturation</label>
         </div>
         <div>
           <input
@@ -52,6 +54,7 @@ class App extends Component {
             max="100"
             onChange={this.handleLightnessChange}
           />
+          <label htmlFor="lightness">Lightness</label>
         </div>
         <div>
           <input
