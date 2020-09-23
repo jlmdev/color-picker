@@ -16,6 +16,11 @@ class App extends Component {
   handleLightnessChange = event => {
     this.setState({ lightness: event.target.value })
   }
+  handleRandomButtonClick = event => {
+    this.setState({ hue: Math.floor(Math.random() * 361) })
+    this.setState({ saturation: Math.floor(Math.random() * 101) })
+    this.setState({ lightness: Math.floor(Math.random() * 101) })
+  }
 
   render() {
     return (
@@ -46,6 +51,13 @@ class App extends Component {
             value={this.state.lightness}
             max="100"
             onChange={this.handleLightnessChange}
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="Random"
+            onClick={this.handleRandomButtonClick}
           />
         </div>
       </div>
