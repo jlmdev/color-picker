@@ -30,40 +30,44 @@ class App extends Component {
           backgroundColor: `hsl(${this.state.hue},${this.state.saturation}%,${this.state.lightness}%)`,
         }}
       >
-        <div className="slider">
-          <input
-            type="range"
-            value={this.state.hue}
-            max="360"
-            onChange={this.handleHueChange}
-          />
-          <label htmlFor="hue">Hue</label>
-        </div>
-        <div className="slider">
-          <input
-            type="range"
-            value={this.state.saturation}
-            max="100"
-            onChange={this.handleSaturationChange}
-          />
-          <label htmlFor="saturation">Saturation</label>
-        </div>
-        <div className="slider">
-          <input
-            type="range"
-            value={this.state.lightness}
-            max="100"
-            onChange={this.handleLightnessChange}
-          />
-          <label htmlFor="lightness">Lightness</label>
-        </div>
-        <div className="button-container">
-          <input
-            type="button"
-            value="Random"
-            onClick={this.handleRandomButtonClick}
-          />
-        </div>
+        <ul>
+          <li className="title">Color Picker</li>
+          <li className="slider">
+            <input
+              type="range"
+              value={this.state.hue}
+              max="360"
+              onChange={this.handleHueChange}
+            />
+            <label htmlFor="hue">Hue</label>
+          </li>
+          <li className="slider">
+            <input
+              type="range"
+              value={this.state.saturation}
+              max="100"
+              onChange={this.handleSaturationChange}
+            />
+            <label htmlFor="saturation">Saturation</label>
+          </li>
+          <li className="slider">
+            <input
+              type="range"
+              value={this.state.lightness}
+              max="100"
+              onChange={this.handleLightnessChange}
+            />
+            <label htmlFor="lightness">Lightness</label>
+          </li>
+          <li className="button-container">
+            <input
+              className="button"
+              type="button"
+              value="Random"
+              onClick={this.handleRandomButtonClick}
+            />
+          </li>
+        </ul>
       </div>
     )
   }
